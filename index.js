@@ -9,6 +9,7 @@ const connectDB = async () => {
 const app = express();
 
 connectDB();
+app.use(express.json());
 
 app.get("/", async(req,res,next) => {
     res.send("Hello from the mongoose form");
